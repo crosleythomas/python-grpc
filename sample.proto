@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message SampleInput {
+    string input = 1;
+}
+
+message SampleOutput {
+    string output = 1;
+}
+
+service Sample {
+    rpc SampleMethod(SampleInput) returns (SampleOutput) {}
+}
