@@ -8,6 +8,12 @@ Steps:
 * Figure out how to templatize a python function being loaded into the Docker image as a gRPC service
 * Set up the Github Actions that will deploy these gRPC services
 * Document the one-off setup steps that will need to be performed each time this repo is cloned
+    * GCP Account setup
+        * Enable Billing
+        * Create a Project
+        * Docker Registry [Enable the Container Registry API](https://cloud.google.com/container-registry/docs/pushing-and-pulling?_ga=2.194564205.-1139661921.1583806155)
+        * Configure Docker to use gcloud `gcloud auth configure-docker`
+        * Cloud Run
     * Call setup script with ___, ___, ..., ___
     * Define input/output protobuf messages
     * Define function

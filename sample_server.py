@@ -1,6 +1,7 @@
 from concurrent import futures
 
 import logging
+import os
 
 import grpc
 
@@ -23,7 +24,9 @@ def serve():
     server = grpc.server(futures.ThreadPoolExecutor())
     pb2_grpc.add_SampleServicer_to_server(
         SampleServicer(), server)
-    server.add_insecure_port('[::]:50051')
+    bind_address = "[::]:%s" % (os.environ["PORT"] if ("PORT" in os.environ) else '50051')
+    print("Adding connection for %s" % bind_address)
+    server.add_insecure_port(bind_address)
     server.start()
     server.wait_for_termination()
 
