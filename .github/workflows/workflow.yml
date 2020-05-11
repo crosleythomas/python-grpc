@@ -80,11 +80,9 @@ jobs:
 
       - name: Deploy service to Cloud Run
         uses: stefda/action-cloud-run@v1.0
-        env:
-          IMAGE_NAME: gcr.io/${{env.GCP_PROJECT}}/${{IMAGE_NAME}}
         with:
-          image: $IMAGE_NAME
-          service: ${{ GCP_SERVICE }}
-          project: ${{ GCP_PROJECT }}
-          region: ${{ GCP_REGION }}
+          image: gcr.io/${{env.GCP_PROJECT}}/${{env.IMAGE_NAME}}
+          service: ${{ env.GCP_SERVICE }}
+          project: ${{ env.GCP_PROJECT }}
+          region: ${{ env.GCP_REGION }}
           service key: ${{ secrets.GCLOUD_AUTH }}
