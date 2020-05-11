@@ -83,6 +83,6 @@ jobs:
         with:
           image: gcr.io/[your-project]/[image]
           service: $GCP_SERVICE
-          project: $GCP_PROJECT
+          project: github-276707
           region: $GCP_REGION
           service key: ${{ secrets.GCLOUD_AUTH }}
