@@ -1,4 +1,7 @@
 # python-grpc
+
+![Test, Build, Publish](https://github.com/crosleythomas/python-grpc/workflows/Test,%20Build,%20Publish/badge.svg)
+
 Template for deploying Python gRPC services
 
 Goal: develop a template repository that can be cloned, updated with a single function, and immediately deployed so the function can be called.
