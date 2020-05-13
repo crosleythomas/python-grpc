@@ -1,4 +1,7 @@
 # python-grpc
+
+![Test, Build, Publish](https://github.com/crosleythomas/python-grpc/workflows/Test,%20Build,%20Publish/badge.svg)
+
 Template for deploying Python gRPC services
 
 ## Goal
